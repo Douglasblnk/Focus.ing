@@ -12,7 +12,7 @@ export const Countdown = () => {
   const seconds = time % 60;
 
   const getLeftRightTiming = value => String(value).padStart(2, '0').split('');
-
+  
   const [minuteLeft, minuteRight] = getLeftRightTiming(minutes);
   const [secondLeft, secondRight] = getLeftRightTiming(seconds);
 
@@ -21,9 +21,7 @@ export const Countdown = () => {
     else startCountdown();
   }
 
-  const startCountdown = () => {
-    setIsActive(true);
-  }
+  const startCountdown = () => setIsActive(true);
 
   const resetCountdown = () => {
     clearTimeout(countdownTimeout);
